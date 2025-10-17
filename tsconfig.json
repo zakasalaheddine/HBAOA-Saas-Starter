@@ -1,7 +1,12 @@
 {
   "compilerOptions": {
-    "strict": true,
-    "jsx": "react-jsx",
-    "jsxImportSource": "hono/jsx"
-  }
+			"strict": true,
+			"jsx": "react-jsx",
+			"jsxImportSource": "hono/jsx",
+			"paths": {
+				"@/*": ["./src/*"]
+			}
+		},
+		"include": ["src/**/*.ts"],
+		"exclude": ["node_modules", "dist"]
 }
