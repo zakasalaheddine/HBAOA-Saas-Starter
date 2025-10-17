@@ -5,7 +5,6 @@ import notFound from '@/middlewares/not-found'
 import onError from '@/middlewares/on-error'
 import { loggerMiddleware } from '@/middlewares/pino-logger'
 
-
 const app = new OpenAPIHono<{
   Variables: {
     logger: PinoLogger

@@ -1,7 +1,7 @@
 import app from '@/app'
+import { env } from '@/utils/env'
 
 export default {
-	// biome-ignore lint/correctness/useParseIntRadix: It will be parsed later
-	port: process.env.PORT ? parseInt(process.env.PORT) : 9000,
-	fetch: app.fetch
+  port: env.PORT,
+  fetch: app.fetch
 }
