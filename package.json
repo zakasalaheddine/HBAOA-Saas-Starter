@@ -1,12 +1,14 @@
 {
   "name": "api",
   "type": "module",
+  "version": "0.0.1",
   "scripts": {
     "dev": "bun run --hot src/index.ts",
     "lint": "biome lint --write"
   },
   "dependencies": {
     "@hono/zod-openapi": "^1.1.3",
+    "@scalar/hono-api-reference": "^0.9.22",
     "dotenv": "^17.2.3",
     "dotenv-expand": "^12.0.3",
     "hono": "^4.10.1",
