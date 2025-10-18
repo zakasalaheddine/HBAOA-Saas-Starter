@@ -6,7 +6,10 @@ expand(config())
 
 const envSchema = z.object({
   PORT: z.coerce.number().default(9000),
-  NODE_ENV: z.enum(['development', 'production']).default('development')
+  NODE_ENV: z.enum(['development', 'production']).default('development'),
+  BETTER_AUTH_SECRET: z.string(),
+  BETTER_AUTH_URL: z.url(),
+  DATABASE_URL: z.string()
 })
 
 export type Env = z.infer<typeof envSchema>
