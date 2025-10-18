@@ -9,7 +9,8 @@ const envSchema = z.object({
   NODE_ENV: z.enum(['development', 'production']).default('development'),
   BETTER_AUTH_SECRET: z.string(),
   BETTER_AUTH_URL: z.url(),
-  DATABASE_URL: z.string()
+  DATABASE_URL: z.string(),
+  CORS_ORIGIN: z.url()
 })
 
 export type Env = z.infer<typeof envSchema>
