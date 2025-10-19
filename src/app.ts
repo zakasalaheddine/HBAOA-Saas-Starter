@@ -1,11 +1,11 @@
 import { configureOpenAPI } from '@/lib/configure-openapi'
 import { createApp } from '@/lib/create-app'
-import indexRoute from '@/routes/index.route'
 import { authRouter } from './routes/auth.route'
+import { usersRouter } from './routes/users.route'
 
 const app = createApp()
 
-const routes = [indexRoute, authRouter]
+const routes = [usersRouter, authRouter]
 
 configureOpenAPI(app)
 
