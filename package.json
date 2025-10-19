@@ -1,5 +1,17 @@
 {
-  "name": "api",
+  "name": "hono-better-auth-openapi-saas-starter",
+  "description": "A production-ready SaaS starter template built with Hono, Better Auth, and OpenAPI documentation",
+  "keywords": ["hono", "better-auth", "openapi", "saas", "starter", "typescript", "postgresql", "drizzle", "authentication", "api"],
+  "author": "Your Name",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:zakasalaheddine/HBAOA-Saas-Starter.git"
+  },
+  "bugs": {
+    "url": "https://github.com/zakasalaheddine/HBAOA-Saas-Starter/issues"
+  },
+  "homepage": "https://github.com/zakasalaheddine/HBAOA-Saas-Starter#readme",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
