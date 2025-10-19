@@ -6,7 +6,7 @@ import { jsonContent } from '@/utils/json-content'
 
 export const usersRouter = createRouter()
 
-usersRouter.use('/users/*', requireAuth()) // require auth for all /users routes
+usersRouter.use('/users/*', requireAuth('admin')) // require auth for all /users routes
 
 usersRouter.openapi(
   createRoute({
