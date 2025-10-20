@@ -1,4 +1,5 @@
 import { createRoute, z } from '@hono/zod-openapi'
+import { dal } from '@/db/data-access'
 import { createRouter } from '@/lib/create-app'
 import { requireAuth } from '@/middlewares/require-auth'
 import * as HTTP_STATUS_CODES from '@/utils/http-status-codes'
@@ -25,8 +26,9 @@ usersRouter.openapi(
       )
     }
   }),
-  (c) => {
-    return c.json([{ id: '1', name: 'John Doe' }], HTTP_STATUS_CODES.OK)
+  async (c) => {
+    const users = await dal.users.list()
+    return c.json(users, HTTP_STATUS_CODES.OK)
   }
 )
 
